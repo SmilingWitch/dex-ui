@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+ 
+ :root {
+     --bgColor : black ;
+     --fontColor : #FCA311 ; 
+     --cumplimentColor: #14213D ;
+     --detailColor: #E5E5E5;
+     --otherColor: white ;
+     --rgbaColor : rgba(138, 134, 134, 0.7);
+     --turquesa : turquoise;
+ }
+
+*{
+
+    box-sizing: border-box ;
+    font-family: 'Poppins', sans-serif;
+}
+.screen {
+    position: relative ;
+    z-index: 10000000000000000;
+    background: transparent ;
+    width: 100%;
+    min-height: 100vh ;
+    background: transparent;   
+}
+.info {
+    position: relative ;
+    width: 100% ;
+    height: 80px ;  
+}
+.brand{
+    display: flex ;
+    width: 400px ;
+    justify-content: center;
+    align-items: center ;
+    top: 5px;
+}
+.img {
+    position: relative;
+    width: 70px ;
+    height: 70px ;
+    background-image: url("./LogoMain.png");
+    background-size: cover ;
+    margin-right: 10px ;
+
+}
+.pokeroi {
+    color: var(--otherColor);
+    text-transform: uppercase;
+    font-size: 0.5em;
+}
+
+.Bx {
+    position: relative ;
+    display: grid ;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr ));
+    top: 60px;
+}
+.Bx1 {
+    position: relative ;
+    display: flex ;
+    align-items: center ;
+    justify-content: center;  
+}
+.Bx1 .header {
+    width: 300px;
+}
+.Bx1 h1 {
+    color: var(--otherColor);
+    text-align: center ;   
+}
+.Bx1 h1 span {
+    color: var(--turquesa);
+    text-shadow:1px 1px 1px black,
+    1px 1px  0.1em var(--turquesa)
+    
+}
+.Bx1 h1 .matic {
+    color: var(--fontColor);
+    text-shadow:1px 1px 1px black,
+    1px 1px  0.1em var(--fontColor)
+    
+}
+.Bx2 {
+    position: relative ;
+}
+.header {
+    width: 100% ;
+    min-height: 20px ;
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+    margin-bottom: 25px;
+    font-size: 0.8em;
+}
+h2{
+    color: var(--fontColor);
+    position: relative;
+    font-size: 1.5em ;
+   
+}
+.submit {
+    position: relative ;
+    width: 100% ;
+    display: grid ;
+    align-items: center ;
+    justify-content: center ;
+   
+}
+.criptoBX {
+    position: relative ;
+    width: 100% ;
+    min-height: 50px;
+    display: flex ;
+    align-items: center ;
+    justify-content: center; 
+}
+
+.Container {
+    position: relative ;
+    border-radius: 20px;
+    width: 400px ;
+    min-height: 250px ;
+    border: 1px solid transparent;
+    border-left: 1px solid  transparent;
+    background: transparent;
+    box-shadow: 0 0 0 5px transparent ,
+    0 0 0px transparent ,
+    0 0 0px transparent;
+    overflow: hidden ;
+    top: 30px;  
+}
+
+.selectContainer {
+    display: flex ;
+    align-items: center ;
+    justify-content: left ;
+}
+.inputBx {
+    position: relative ;
+    width: 0px ;
+    height: 100%;
+}
+.inputBx input {
+    position: relative;
+    width: 0% ;
+    padding: 10px ;
+    border-radius: 5px ;
+    visibility: hidden;
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #fff ;
+    font-size: 1em ;
+    outline: none;
+}
+
+
+.inputBx span {
+    position: absolute ; 
+    left: 0 ;
+    padding: 10px ;
+    pointer-events: none ;
+    font-size: 1em ;
+    color: rgba(255,255,255,0.25) ;
+    visibility: hidden;
+    transition: 0.5s ;
+}
+
+.inputBx input:valid ~ span,
+.inputBx input:focus ~ span {
+    color: var(--turquesa);
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65em ;
+    padding: 0 10px ;
+    background: black;
+    border-left: 1px solid var(--cumplimentColor);
+    border-right: 1px solid var(--cumplimentColor);
+    letter-spacing: 0.2em ;
+    background: #09111f;
+}
+.inputBx input:valid,
+.inputBx input:focus {
+    border: 2px solid var(--cumplimentColor) ;
+}
+
+.RMAI, .PKR {
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+    margin: 20px;
+}
+
+.submit input {
+    position: relative;
+    background: var(--fontColor);
+    bottom: -100px;
+    color: #09111f ;
+    width: 150px ;
+    padding: 10px;
+    font-size: 1em;
+    letter-spacing: 2px ;
+    font-weight: 500;
+    border-radius: 20px;
+    margin: 20px ;
+    font-weight: bolder;
+    border: none;
+}
+.submit input:focus{
+    background: #af6606;
+}
+.buttom {
+    position: relative;
+    width: 100%;
+    display: flex ;
+    align-items: center ;
+    justify-content: center;
+    
+}
+.margin {
+    height: 100px ;
+    width: 100%;
+}
+
+.stats{
+    position: relative;
+    width: 100% ;
+    min-height: 150px ;
+    display: flex ;
+    align-items: center ;
+    justify-content: center;
+    
+    
+}
+.statsBx {
+    position: relative;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr ));
+    grid-gap: 10px;
+    min-height: 150px ;
+}
+.stat{
+    position: relative ;
+    color: var(--fontColor);
+    width: 150px ;
+    height: 150px ; 
+    transition: 0.2s;
+}
+
+.number {
+    font-size: 2.5em ;
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+    margin-top: 10px ;
+    
+}
+.cont {
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+    color: var(--otherColor);
+    margin-top: 10px ;
+   
+}
+
+.body{
+    min-height: 100vh;
+    width: 100% ;
+    background: radial-gradient(#09111f,#000000)    ;
+    position: relative;
+    overflow: hidden;
+}
+.bubbles{
+    position: absolute ;
+    width: 500vh ;
+    height: 100%;
+    display: flex ;
+    z-index: 10;  
+    
+}
+.bubbles span {
+    position: relative ;
+    width: 30px ;
+    height: 30px ;
+    background: var(--turquesa) ;
+    margin: 0 4px ;
+    border-radius: 50% ;
+    box-shadow: 0 0 0 10px var(--cumplimentColor) ,
+    0 0 50px var(--turquesa) ,
+    0 0 10px var(--turquesa);
+
+}
+.bubbles span:nth-child(even){
+    background: var(--fontColor) ;
+    box-shadow: 0 0 0 10px #633f05  ,
+    0 0 50px var(--fontColor)   ,
+    0 0 10px var(--fontColor)  ;
+}
+
+
+
+@media (max-width : 500px) {
+    .brand{
+        display: flex ;
+        width: 400px ;
+        justify-content: left;
+        align-items: center ;
+        top: 5px;
+    }
+    
+    .img {
+        position: relative;
+        width: 50px ;
+        height: 50px ;
+        background-image: url(LogoMain.png);
+        background-size: cover ;
+        
+    
+    }
+    .pokeroi {
+        color: var(--otherColor);
+        text-transform: uppercase;
+        font-size: 0.4em;
+    }
+    .Bx1 .header {
+        width: 90%;
+        font-size: 0.7em;
+    }
+    .Bx1 h1 {
+        color: var(--otherColor);
+        text-align: center ;   
+    }
+    .Bx1 h1 span {
+        color: var(--turquesa);
+        text-shadow:1px 1px 1px black,
+        1px 1px  0.1em var(--turquesa)
+        
+    }
+    .Bx1 h1 .matic {
+        color: var(--fontColor);
+        text-shadow:1px 1px 1px black,
+        1px 1px  0.1em var(--fontColor)
+        
+    }
+    
+    .Container {
+        position: relative ;
+        border-radius: 20px;
+        width: 80% ;
+        min-height: 100px ;
+        border: 1px solid transparent;
+        border-left: 1px solid  transparent;
+        background: transparent;
+        box-shadow: 0 0 0 5px transparent ,
+        0 0 0px transparent ,
+        0 0 0px transparent;
+        
+    }
+
+.selectContainer {
+    display: flex ;
+    align-items: center ;
+    justify-content: left ;
+}
+.inputBx {
+    position: relative ;
+    width: 100% ;
+    height: 100%;    
+}
+
+.inputBx input {
+    position: relative;
+    width: 100% ;
+    padding: 10px ;
+    border: 1px solid rgba(255,255,255,0.25);
+    background: #09111f;
+    border-radius: 5px ;
+    color: #fff ;
+    font-size: 0.8em ;
+    outline: none;
+    
+}
+.inputBx span {
+    position: absolute ; 
+    left: 0 ;
+    padding: 10px ;
+    pointer-events: none ;
+    font-size: 0.8em ;
+    color: rgba(255,255,255,0.25) ;
+    transition: 0.5s ;
+}
+.submit input
+{
+    position: relative;
+    background: var(--fontColor);
+    color: #09111f ;
+    width: 120px ;
+    padding: 10px;
+    font-size: 1em;
+    letter-spacing: 2px ;
+    font-weight: 50px;
+    border-radius: 20px;
+    margin: 20px ;
+    border: none;
+    
+
+}
+
+}
+
+/*--------------Animaciones-------------*/
+
+
+
+.Container {
+    animation: show1 1s ease  0.5s 1 forwards;
+}
+
+.inputBx {
+    animation: show5 1s ease  1.5s 1 forwards;
+}
+
+.inputBx input {
+    animation: show2 1s ease  1.5s 1 forwards;  
+}
+
+.submit input {
+    animation: show4 1s ease  1.5s 1 forwards;
+}
+
+.inputBx span {
+    animation: show3 1s ease-in-out  2s 1 forwards;
+}
+
+.bubbles span {
+    animation: animate 5s linear infinite ;
+    animation-duration: calc(125s / var(--i));
+}
+
+@keyframes show1 {
+    from {
+        border: 1px solid transparent;
+        border-left: 1px solid  transparent;
+        background: transparent;
+        box-shadow: 0 0 0 5px transparent ,
+        0 0 0px transparent ,
+        0 0 0px transparent;
+
+    }
+    to {
+        border: 1px solid var(--turquesa);
+        border-left: 1px solid  var(--turquesa);
+        background: #070d18;
+        box-shadow: 0 0 0 5px var(--cumplimentColor) ,
+        0 0 0px var(--cumplimentColor) ,
+        0 0 0px var(--cumplimentColor);
+    }
+    
+}
+
+@keyframes show2 {
+    from {
+        visibility: hidden;
+        width: 0% ;
+        background:#3c5683 ;
+    }
+    to {
+        visibility: visible;
+        width: 100% ;
+        background: #09111f;
+    }   
+}
+
+@keyframes show3 {
+    from {
+        visibility: hidden;
+    }
+    to {
+        visibility: visible;
+    }   
+}
+
+@keyframes show4 {
+    from {
+        bottom: -100px;
+    }
+    to {
+        bottom: 0px ;
+    }
+}
+
+@keyframes show5 {
+    from {
+        width: 0px ;
+    }
+    to {
+        width: 250px;
+    } 
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(200vh) scale(-1);
+    }
+    50%{
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
